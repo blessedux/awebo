@@ -23,3 +23,56 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
+
+/* Hide Unicorn Studio "made with" / branding tag in our ASCII scene */
+.midsection-ascii-root a[href*='unicorn'],
+.midsection-ascii-root a[href*='unicorn.studio'],
+.midsection-ascii-root [class*='watermark'],
+.midsection-ascii-root [class*='branding'],
+.midsection-ascii-root [class*='us-logo'],
+.midsection-ascii-root [class*='us-branding'],
+.midsection-ascii-root [data-us-branding],
+.midsection-ascii-root iframe + a,
+.midsection-ascii-root canvas + a,
+.midsection-ascii-root div:last-child > a[target='_blank'] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+/* If SDK wraps the link in a container, hide the wrapper when it only contains the branding link */
+.midsection-ascii-root div:has(> a[href*='unicorn']:only-child) {
+  display: none !important;
+}
+
+/* Hide Unicorn Studio watermark in footer slide / embed */
+.unicorn-studio-embed a[href*='unicorn'],
+.unicorn-studio-embed a[href*='unicorn.studio'],
+.unicorn-studio-embed [class*='watermark'],
+.unicorn-studio-embed [class*='branding'],
+.unicorn-studio-embed [class*='us-logo'],
+.unicorn-studio-embed [class*='us-branding'],
+.unicorn-studio-embed [data-us-branding],
+.unicorn-studio-embed iframe + a,
+.unicorn-studio-embed canvas + a,
+.unicorn-studio-embed div:last-child > a[target='_blank'] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+.unicorn-studio-embed div:has(> a[href*='unicorn']:only-child) {
+  display: none !important;
+}

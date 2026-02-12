@@ -188,4 +188,3 @@ function ManageMerchTab() {
     </div>
   );
 }
-
